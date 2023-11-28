@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+  <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+
+{% include 'admin/navbar.html' %}
+<h1>Generate PDF</h1>
+<form action="/generate_pdf" method="POST">
+    <label for="first_name">First Name:</label>
+    <input type="text" name="first_name" required><br>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" name="last_name" required><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" name="phone" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" required><br>
+
+    <label for="product_name">Product Name:</label>
+    <input type="text" name="product_name" required><br>
+
+    <label for="receipt">Payment Receipt:</label>
+    <textarea name="receipt" required></textarea><br>
+
+    <button type="submit">Generate PDF</button>
+</form>
+
+<!-- Add a link to download the generated PDF -->
+{% if pdf_link %}
+<p><a href="{{ pdf_link }}" download="user_information.pdf">Download PDF</a></p>
+{% endif %}
+
+{% endblock content %}

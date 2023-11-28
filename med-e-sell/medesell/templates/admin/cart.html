@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }} ">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css') }}">
+<link rel="stylesheet" href="../../static/css/cart.css">
+<body>
+    
+    <div class="logo_section">
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-12">
+                 <div class="logo"><a href="{{ url_for('products') }}"><img src="{{url_for('static', filename='img/logo.png')}}"></a></div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <p><a href="{{ url_for('products') }}">Back to Products</a></p>
+     <br>
+     {% if cart %}
+     <h1>Your Cart</h1>
+    <ul>
+        {% for product_id, item in cart.items() %}
+            <li>
+                <strong>{{ item.name }}</strong><p> --
+                Price: ${{ item.price }} --
+                Quantity:{{item.quantity }} --
+                Total: ${{item.total }}</p>
+                <form method="POST" action="{{ url_for('delete_item', product_id=product_id) }}">
+                    <button type="submit">Delete</button>
+                </form>
+            
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Total Price: ${{ total_price }}</h2>
+    <br><br>
+    <div class="d-flex justify-content-center">
+        <form action="{{ url_for('generate_pdf') }}" method="post" class="center-content">
+            <div class="mb-3 row">
+                <div class="col">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" class="form-control" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="center-content">
+                <button type="submit" class="btn btn-primary shadow ">Generate the bill</button>
+            </div>
+        </form>
+    </div>
+    {% else %}
+        <p>You haven't chosen any products yet.</p>
+    {% endif %}
+</body>
+{% endblock %}

@@ -1,0 +1,28 @@
+
+{% block content %}
+
+<body>
+    <nav class="navbar navbar-expand-lg ps-5">
+      <div class="container-fluid ">
+        <div class="logo mb-3 me-4"><a href="/"><img src="{{url_for('static', filename='img/logo-medesell.png')}}"></a></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-underline">
+                <li class="nav-item">
+                  <a class="nav-link text-black" aria-current="page" href="/products">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-black" href="/aboutus">About us</a>
+                </li>
+              </ul>
+              {% if not connected and home %}
+              <a class="btn btn-primary shadow text-white mx-2 my-2" href="/login">Login</a>
+              <a class="btn btn-outline-primary shadow mx-2 my-2 text-white" href="/register">Register</a>
+              {%endif%}
+        </div>
+      </div>
+    </nav>
+
+{% endblock content %}

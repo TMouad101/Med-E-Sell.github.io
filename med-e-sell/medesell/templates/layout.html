@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }} " />
+    <title>{{title}}</title>
+  </head>
+  
+    {% block content %}
+
+    {% endblock content %}
+        <!-- Import alert.js -->
+        <script src="{{ url_for('static', filename='js/alert.js') }}"></script>
+        <!-- Import dashboard.js -->
+        <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+        <!-- Import bootstrap.bundle.js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+        <!-- Import jquery-3.0.0.min.js -->
+        <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+        <!-- Import bootstrap.bundle.js.map -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.js.map') }}"></script>
+        <!-- Import bootstrap.bundle.min.js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Import jquery.mCustomScrollbar.concat.min.js -->
+        <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+        <!-- Import jquery.min.js -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <!-- Import jquery.validate.js -->
+        <script src="{{ url_for('static', filename='js/jquery.validate.js') }}"></script>
+        <!-- Import mdb.min.js -->
+        <script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+        <!-- Import modernizer.js -->
+        <script src="{{ url_for('static', filename='js/modernizer.js') }}"></script>
+        <!-- Import bootstrap.min.js -->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <!-- Import plugin.js -->
+        <script src="{{ url_for('static', filename='js/plugin.js') }}"></script>
+        <!-- Import popper.min.js -->
+        <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+        <!-- Import slider-setting.js -->
+        <script src="{{ url_for('static', filename='js/slider-setting.js') }}"></script>
+        <!-- Import custom.js -->
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+
+  </body>
+</html>

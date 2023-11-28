@@ -1,0 +1,37 @@
+<head><link rel="stylesheet" href="../../static/css/bill.css">
+    
+</head>
+<h2 style="text-align: center;">
+    <span style="color: #000000;">
+        <strong>Date d'achat : {{ today_date }}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Numero de facture : {{ num }}</strong>
+    </span>
+</h2>
+<p style="text-align: center;"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/logo.png" width="100" height="100" class="logo"/></p>
+<h1 style="text-align: center;"><span style="color: #000000;"><strong>Facture d'achat</strong></span></h1>
+<p>&nbsp;</p>
+<p style="text-align: center; font-size: 21px;"><strong>De Monsieur (Madame) </strong> {{name}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>Num&eacute;ro du t&eacute;l&eacute;phone :</strong> {{phone}}</p>
+<p style="text-align: center;">D&Eacute;TAILS DE LA COMMANDE</p>
+<table style="height: 92px; width: 85.9375%; font-size: 20px;border-collapse: collapse; border-style: solid; margin-left: auto; margin-right: auto;" border="1">
+    <thead>
+        <tr>
+            <th style="width: 33.3333%;">Nom du Produit</th>
+            <th style="width: 33.3333%; text-align: center;">Prix</th>
+            <th style="width: 33.3333%; text-align: center;">Quantit&eacute;</th>
+            <th style="width: 33.3333%; text-align: center;">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product_id, item in cart.items() %}
+            <tr>
+                <td>{{ item['name'] }}</td>
+                <td style="text-align: center;">{{ item['price'] }}</td>
+                <td style="text-align: center;">{{ item['quantity'] }}</td>
+                <td style="text-align: center;">{{ item['total'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p style="text-align: left; font-size: 24px;">TOTAL &Agrave; PAYER :</p>
+<p style="text-align: left; font-size: 24px; text-align: center;">Montant total : {{ total }}</p>
+<br><br><br><br>
+<p style="display: block; margin-top: 20px; text-align: center; font-size: 22px;"><strong >Thanks for using Med-E-Sell!</strong> We appreciate your visit. : )</p>

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+  <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+
+{% include 'admin/navbar.html' %}
+    <div class="container text-center text-black ">
+        <div class="row align-items-center">
+          <div class="col">
+            <p class="fs-2 fw-bold">Connecting Pharmacies to Their Vital Suppliers!</p>
+            <p class="fs-4">We are here to facilitate medicine selling operations.</p>
+            <!-- <form action="{{ url_for('generate_pdf') }}" method="get">
+              <button type="submit" class="btn btn-primary shadow ">Generate PDF</button>
+          </form> -->
+          <a href="/products"><button type="submit" class="btn btn-primary shadow ">Let's get started</button></a>
+          </div>
+          <div class="col">
+            <!-- <img style="position: absolute; z-index: 2;" src="{{url_for('static', filename='img/icon.png')}}" alt=""> -->
+            <!-- <img  src="{{url_for('static', filename='img/object.png')}}" alt=""> -->
+            <img src="{{url_for('static', filename='img/main4.png')}}" alt="">
+          </div>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+ 
+
+<div class="container">
+    {% from "_formhelpers.html" import render_field %}
+    <form class="text-center" method="post" enctype="multipart/form-data">
+        <div>
+            {{ render_field(form.name, class="form-control") }}
+            {{ render_field(form.name.label,class="form-label") }}
+            {{ form.email(class="form-control") }}
+            {{ form.email.label(class="form-label") }}
+            {{ form.password(class="form-control") }}
+            {{ form.password.label(class="label-control") }}
+            {{ form.confirm(class="form-control") }}
+            {{ form.confirm.label(class="form-label") }}
+        </div>
+        <p>
+            <input type="submit" value="Register" class="btn btn-primary">
+        </p>
+    </form>
+</div>
+
+
+{% endblock content %}

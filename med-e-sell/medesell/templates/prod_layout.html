@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/mdb.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_prod.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }}">
+
+  </head>
+  <body >
+    
+		<!-- logo section start -->
+		<div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="/"><img src="{{url_for('static', filename='img/logo.png')}}"></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- logo section end -->
+    <div class="header_section">
+        <div class="container">
+           <div class="containt_main">
+              <div id="mySidenav" class="sidenav">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                 <a href="/">Acceuil</a>
+                 <a href="/products" onclick="closeNav()">Produit</a>
+                 <a href="/aboutus">à propos</a>
+              </div> 
+              <span class="toggle_icon" onclick="openNav()"><img src="{{url_for('static', filename='img/toggle-icon.png')}}"></span>
+              
+              <div class="main">
+                 <!-- Another variation with a button -->
+                 <div class="input-group">
+                   <input type="text" class="form-control p-4 rounded " placeholder="Cherche un produit" style="font-size: 1.5rem;">
+                   <div class="input-group-append">
+                     <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                     <i class="fa fa-search"></i>
+                     </button>
+                  </div>
+                 </div>
+              </div>
+              <div class="header_box">
+                 
+                 <div class="login_menu">
+                    <ul>
+                       <li><a href="/dashboard">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                          <span class="padding_10">{{user.name}}</span></a>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+{% block content %}
+
+
+{% endblock content %}
+
+<div class="footer_section layout_padding">
+    <div class="container">
+       <div class="footer_logo"><a href="home.html"><img src="{{url_for('static', filename='img/logo.png')}}"></a></div>
+       <div class="footer_menu">
+       <div class="location_main">Numéro de la ligne d'assistance : <a href="#">+212 XXXXXXXXX</a></div>
+    </div>
+ </div>
+ <!-- footer section end -->
+ <!-- copyright section start -->
+ <div class="copyright_section">
+    <div class="container">
+       <p class="copyright_text">© 2023 All Rights Reserved. Design by <a href="../aboutus/about.html">med-e-sell</a></p>
+    </div>
+ </div>
+ <!-- copyright section end -->
+
+ <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    function goback(){
+        window.history.back();
+    }
+ </script>
+ 
+<script src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
+</html>

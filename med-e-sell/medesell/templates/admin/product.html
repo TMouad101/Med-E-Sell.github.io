@@ -1,0 +1,297 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/products.css') }} ">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/carousel.css') }}">
+<body>
+    <!-- banner bg main start -->
+    <div class="banner_bg_main">
+       <!-- logo section start -->
+       <div class="logo_section">
+          <div class="container">
+             <div class="row">
+                <div class="col-sm-12">
+                   <div class="logo"><a href="/"><img src="{{url_for('static', filename='img/logo.png')}}"></a></div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- logo section end -->
+       <!-- header section start -->
+       <div class="header_section">
+          <div class="container">
+             <div class="containt_main">
+                <div id="mySidenav" class="sidenav">
+                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                   <a href="/">Acceuil</a>
+                   <a href="#meds_section" onclick="closeNav()">Antibiotics</a>
+                   <a href="#antihistamines_section" onclick="closeNav()">Antihistamines</a>
+                   <a href="#Firstaidkit_section" onclick="closeNav()">First aid kit</a>
+                   <a href="#femprods_section" onclick="closeNav()">Feminine products</a>
+                   <a href="../aboutus">à propos</a>
+                </div>
+                <span class="toggle_icon" onclick="openNav()"><img src="{{url_for('static', filename='img/toggle-icon.png')}}"></span>
+                
+                <div class="main">
+                   <!-- Another variation with a button -->
+                   <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Chercher un produit">
+                      <div class="input-group-append">
+                         <button class="btn btn-secondary" type="button" style="background-color: #2283f2; border-color:#6b22f2 ">
+                         <i class="fa fa-search"></i>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+                <div class="header_box">
+                   
+                   <div class="login_menu">
+                      <ul>
+                         <li><a href="/dashboard">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span class="padding_10">{{username}}</span></a>
+                         </li>
+                         <li>
+                            <a href="/cart">
+                                <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                                <span class="padding_10"></span>
+                            </a>
+                         </li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- header section end -->
+       <!-- banner section start -->
+       <div class="banner_section layout_padding ">
+          <div class="container">
+             <div id="my_slider" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                   <div class="carousel-item active">
+                      <div class="row">
+                         <div class="col-sm-12">
+                            <h1 class="banner_taital m-5" style="color: rgb(5, 5, 5);"><br> Découvrez les offres de votre fournisseur</h1>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="carousel-item">
+                      <div class="row">
+                         <div class="col-sm-12">
+                            <h1 class="banner_taital m-5" style="color: rgb(5, 5, 5);"><br>Discover the Offers of Your Supplier</h1>
+                         </div>
+                      </div>
+                   </div>
+                   <div class="carousel-item">
+                      <div class="row">
+                         <div class="col-sm-12">
+                            <h1 class="banner_taital my-5" style="color: rgb(5, 5, 5);"> <br>اكتشف عروض<br> موردك <br> </h1>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+                <i class="fa fa-angle-left"></i>
+                </a>
+                <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+                <i class="fa fa-angle-right"></i>
+                </a>
+             </div>
+          </div>
+       </div>
+       <!-- banner section end -->
+    </div>
+    <!-- banner bg main end -->
+    
+    <!-- Antibiotics section start -->
+    <div class="meds_section bg-white " id="meds_section">
+      <div id="main_slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="container">
+                      <h1 class="meds_taital text-left" data-toggle="collapse" href="#productSection" role="button" aria-expanded="false" aria-controls="productSection">Antibiotiques</h1>
+                      <div id="productSection" class="collapse">
+                          <div class="meds_section_2">
+                              <div class="row d-flex flex-row">
+                                  {% for product in antibiotics_products %}
+                                      <div class="col-lg-4 col-sm-4">
+                                          <div class="box_main">
+                                              <h4 class="med_text">{{ product.name }}</h4>
+                                              <p class="price_text">Prix <span style="color: #262626;">DH {{ product.price }}</span></p>
+                                              <p class="price_text">Quantity :<span style="color: #262626;"> {{ product.quantity }}</span></p>
+                                              <div class="meds_img"><img src="{{ url_for('static', filename='uploads/' + product.photo) }}"></div>
+                                              <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                                                 <div class="form-group">
+                                                <label class="quantity-label" for="quantity{{ product.id }}">Quantity:</label>
+                                                <input type="number" class="form-control" id="quantity" name="quantity"  value="1"  min="1">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                            </form>
+                                          </div>
+                                      </div>
+                                  {% endfor %}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+    <!-- Antibiotics section end -->
+    <!-- Antihistamines section start -->
+    <div class="antihistamines_section bg-white" id="antihistamines_section">
+        <div id="antihistamines_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <h1 class="meds_taital text-left" data-toggle="collapse" href="#antihistamines_productSection" role="button" aria-expanded="false" aria-controls="antihistamines_productSection">Antihistaminiques</h1>
+                        <div class="collapse" id="antihistamines_productSection">
+                            <div class="meds_section_2">
+                                <div class="row">
+                                    {% for product in antihistamines_products %}
+                                        <div class="col-lg-4 col-sm-4">
+                                            <div class="box_main">
+                                                <h4 class="med_text">{{ product.name }}</h4>
+                                                <p class="price_text">Prix <span style="color: #262626;">DH {{ product.price }}</span></p>
+                                                <p class="price_text">Quantity :<span style="color: #262626;"> {{ product.quantity }}</span></p>
+                                                <div class="meds_img"><img src="{{ url_for('static', filename='uploads/' + product.photo) }}"></div>
+                                                <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                                                    <div class="form-group">
+                                                        <label class="quantity-label" for="quantity{{ product.id }}">Quantity:</label>
+                                                        <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Antihistamines section end -->
+   <!-- First aid kit section start -->
+<div class="meds_section bg-white" id="Firstaidkit_section">
+   <div id="Firstaidkit_main_slider" class="carousel slide" data-ride="carousel">
+       <div class="carousel-inner">
+           <div class="carousel-item active">
+               <div class="container">
+                   <h1 class="meds_taital text-left" data-toggle="collapse" href="#firstaidkit_productsection" role="button" aria-expanded="false" aria-controls="firstaidkit_productsection">Trousse pharmaceutique</h1>
+                   <div class="collapse" id="firstaidkit_productsection">
+                       <div class="meds_section_2">
+                           <div class="row">
+                               {% for product in firstaidkit_products %}
+                                   <div class="col-lg-4 col-sm-4">
+                                       <div class="box_main">
+                                           <h4 class="med_text">{{ product.name }}</h4>
+                                           <p class="price_text">Prix <span style="color: #262626;">DH {{ product.price }}</span></p>
+                                           <p class="price_text">Quantity :<span style="color: #262626;"> {{ product.quantity }}</span></p>
+                                           <div class="Firstaidkit_img"><img src="{{ url_for('static', filename='uploads/' + product.photo) }}"></div>
+                                           
+                                           <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                                                <div class="form-group">
+                                                <label class="quantity-label" for="quantity{{ firstaidkit_products.id }}">Quantity:</label>
+                                                <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                            </form>
+                                       </div>
+                                   </div>
+                               {% endfor %}
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+    <!-- First aid kit section end -->
+    <!-- Feminine products section start -->
+    <div class="femprods_section bg-white" id="femprods_section">
+        <div id="femprods_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container">
+                        <h1 class="meds_taital text-left" data-toggle="collapse" href="#femprods_productSection" role="button" aria-expanded="false" aria-controls="femprods_productSection">Produits féminins</h1>
+                        <div class="collapse" id="femprods_productSection">
+                            <div class="meds_section_2">
+                                <div class="row">
+                                    {% for product in femprods_products %}
+                                        <div class="col-lg-4 col-sm-4">
+                                            <div class="box_main">
+                                                <h4 class="med_text">{{ product.name }}</h4>
+                                                <p class="price_text">Prix <span style="color: #262626;">DH {{ product.price }}</span></p>
+                                                <p class="price_text">Quantity :<span style="color: #262626;"> {{ product.quantity }}</span></p>
+                                                <div class="femprods_img"><img src="{{ url_for('static', filename='uploads/' + product.photo) }}"></div>
+    
+                                                <form method="post" action="{{ url_for('add_to_cart', product_id=product.id) }}">
+                                                    <div class="form-group">
+                                                        <label for="quantity{{ product.id }}">Quantity:</label>
+                                                        <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+       <!-- <div class="loader_main">
+           <div class="loader"></div>
+       </div> -->
+   </div>
+</div>
+
+    <!-- Feminine products  section end -->
+    <!-- footer section start -->
+    <footer class="" >
+      <div class="footer_section layout_padding">
+       <div class="container">
+          <div class="footer_logo"><a href="home.html"><img src="{{url_for('static', filename='img/footer-logo.png')}}"></a></div>
+          <div class="location_main">Numéro de la ligne d'assistance : <a href="#">+212 645-195405 +212 600-853700 +212 665-169629 +212 664-562988</a></div>
+       </div>
+    </div>
+    <!-- footer section end -->
+    <!-- copyright section start -->
+    <div class="copyright_section">
+       <div class="container">
+          <p class="copyright_text">© 2023 All Rights Reserved. Design by <a href="/aboutus">Med-E-Sell</a></p>
+       </div>
+    </div>
+   </footer>
+    
+    <!-- copyright section end -->
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+     </script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+{% endblock content %}

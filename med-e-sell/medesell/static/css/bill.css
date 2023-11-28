@@ -1,0 +1,30 @@
+
+body {
+    font-size: 35px;
+
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table tr td {
+    padding: 0;
+  }
+  
+  table tr td:last-child {
+    text-align: right;
+  }
+  
+  p {
+    font-size: 76px;
+    font-weight: normal; 
+    
+  }
+
+  strong {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+  }

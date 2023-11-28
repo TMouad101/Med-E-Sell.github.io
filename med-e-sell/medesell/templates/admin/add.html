@@ -1,0 +1,57 @@
+{% extends 'prod_layout.html' %}
+
+{% block content %}
+<style>
+  select > option, .form-select {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+<body>
+
+  {% include '_messages.html' %}
+<div class="container text-center my-5">
+  <div class="card p-5 bg-white shadow login " style="border-radius: 15px;">
+  <h1 class="text-uppercase text-center mb-5">Ajouter un produit</h1>
+    <form class="p-5 bg-white mx-5" >
+          <div class="form-outline mb-3 ">
+            <input type="text" class="form-control" id="name">
+            <label for="name" class="form-label">Nom du produit</label>
+          </div>
+          
+          <div class="form-outline mb-3">
+            <textarea class="form-control" id="description" ></textarea>
+            <label for="description" class="form-label">Description</label>
+          </div>
+          <div class="form-outline mb-3">
+            <input type="number" class="form-control" id="price" >
+            <label for="price" class="form-label">Prix</label>
+          </div>
+          <div class="form-outline mb-3">
+            <select class="form-select form-select-lg" aria-label=" .form-select-lg example" id="category">
+              <option value="">Sélectionnez une catégorie</option>
+              <option value="Electronique">Electronique</option>
+              <option value="Vêtements">Vêtements</option>
+              <option value="Maison">Maison</option>
+              <option value="Alimentation">Alimentation</option>
+            </select>
+          </div>
+          <div class="form-outline my-5 form-outline-lg">
+            <input type="file" class="" style="opacity: 0;" id="photo" >
+            <label for="photo" class="row " style=" cursor: pointer; position: absolute;top: 20%;left:40%;" >  <p class="m-0 p-2 bg-primary rounded shadow">Upload image <i class="fa fa-upload mx-3"></i></p>  </label>
+          </div>
+          
+          <div class="d-flex justify-content-center">
+            <button type="submit"
+                class="btn btn-primary btn-block btn-lg gradient-custom-4 mb-3 text-white" >Add </button>
+            </div> 
+        </form>
+  </div>
+        
+</div>
+
+
+
+{% endblock content %}
+
