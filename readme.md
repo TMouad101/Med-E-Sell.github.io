@@ -1,4 +1,20 @@
 # Med-E-Sell : Being closer to our suppliers
+
+
+
+<b><u>Encadré par :</u> </b> Pr. EL Hamlaoui Mahmoud
+
+<b><u>Réalisé par :</u> </b>
+Mouad Tigmouti  | Moncef Morjane |
+|----------------|-------------------------------|
+|<b>Taha Safa | <b>Zakariaa Hamid|
+</center>
+
+<u><b><center><b> Remerciements 
+
+Nous tenons à exprimer notre gratitude à toutes les personnes qui ont contribué à la réalisation de ce projet. Tout d'abord, Nous voudrons remercier Note professeur EL hamlaoui Mahmoud pour son soutien et son expertise tout au long de ce travail innovatif. Sa contribution a été inestimable pour la réussite de ce projet. Nous voudrions exprimer notre gratitude envers nos collègues pour leur collaboration et leur contribution à ce projet. Leur travail acharné et leur engagement ont permis d'atteindre nos objectifs et de livrer un travail de qualité. Nous sommes reconnaissants envers les organisations/personnes qui ont fourni des ressources ou des données pour leur soutien et leur contribution à ce projet. Leurs ressources et données ont été d'une grande aide pour mener à bien cette étude. Enfin, nous tenons à remercier toutes les personnes qui ont contribué à ce projet, directement ou indirectement. Votre contribution a été inestimable et a permis de mener à bien ce projet de manière efficace et efficiente.
+
+
 ## 1. Introduction 
 
 La digitalisation a métamorphosé plusieurs secteurs économiques, et l'industrie pharmaceutique ne fait pas exception. Dans le cadre d'un projet novateur, nous avons initié le développement d'une application web visant à simplifier la liaison entre fournisseurs de produits pharmaceutiques et pharmacies. Cette initiative s'inscrit dans une dynamique de modernisation et d'optimisation des processus pour répondre aux évolutions constantes du secteur
