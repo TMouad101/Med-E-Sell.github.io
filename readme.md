@@ -1,5 +1,5 @@
 # Med-E-Sell : Being closer to our suppliers
-## Introduction 
+## 1. Introduction 
 
 La digitalisation a métamorphosé plusieurs secteurs économiques, et l'industrie pharmaceutique ne fait pas exception. Dans le cadre d'un projet novateur, nous avons initié le développement d'une application web visant à simplifier la liaison entre fournisseurs de produits pharmaceutiques et pharmacies. Cette initiative s'inscrit dans une dynamique de modernisation et d'optimisation des processus pour répondre aux évolutions constantes du secteur
 ### Présentation brève du projet 
@@ -16,7 +16,7 @@ Est-ce que cette application est adaptable à différentes échelles d'entrepris
 
 Comment l'application contribue-t-elle à réduire les délais de livraison ?
 - En favorisant une communication instantanée, elle permet de réduire les délais de traitement des commandes et d'améliorer la logistique de livraison, grâce à la génération du PDF de confirmation de commande entre pharmacie et fournisseur.
-## Contexte et Objectifs
+## 2. Contexte et Objectifs
 
 Dans un monde en évolution constante, l'industrie pharmaceutique se trouve confrontée à des défis nouveaux et complexes. La demande croissante de produits pharmaceutiques, conjuguée à la nécessité de rationaliser les processus d'approvisionnement, a incité à repenser fondamentalement la façon dont les fournisseurs interagissent avec les pharmacies. C'est dans ce contexte de changement dynamique que l'idée d'une application web novatrice a vu le jour. 
 
@@ -32,7 +32,7 @@ Le contexte réglementaire strict de l'industrie pharmaceutique a également ét
 
 En outre, les avancées technologiques et la diversité des solutions disponibles ont offert un terrain fertile pour l'exploration de différentes approches dans la conception de cette application. Les choix technologiques ont été minutieusement examinés pour garantir une solution robuste, évolutive et adaptée aux besoins spécifiques du secteur pharmaceutique.
 
-## Présentation de projet 
+## 3. Présentation de projet 
 
 Notre projet ambitieux vise à révolutionner l'industrie pharmaceutique par le biais d'une application web novatrice, conçue pour simplifier et optimiser les processus d'approvisionnement. Cette initiative émerge de la nécessité de moderniser la façon dont les fournisseurs de produits pharmaceutiques interagissent avec les pharmacies, en proposant une plateforme innovante de communication et de gestion des stocks.
 
@@ -40,10 +40,10 @@ La conception de l'application a été guidée par une attention particulière �
 
 En résumé, notre projet d'application web représente une avancée significative dans la modernisation de l'industrie pharmaceutique. Il vise à simplifier les échanges entre fournisseurs et pharmacies, à réduire les délais, à améliorer la précision des commandes et à renforcer la fluidité des processus logistiques. Cette initiative s'inscrit dans une vision d'innovation et de transformation, offrant ainsi une plateforme dynamique pour répondre aux besoins évolutifs de l'industrie pharmaceutique.
 
-## Analyse fonctionnelle
+## 4. Analyse fonctionnelle
 ![Diagramme de cas d'utilisation](https://raw.githubusercontent.com/TMouad101/Files/main/image2.jpeg)
 
-## Front-end
+## 5. Front-end
 ### HTML <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image3.png" /></p>
 HTML est un langage de balisage utilisé pour créer des pages web et des applications web. Il permet de structurer le contenu de la page en utilisant des balises et des attributs qui décrivent la présentation et le contenu de la page. Les balises et les attributs sont compris par les navigateurs web qui les utilisent pour afficher le contenu de la page. HTML est un langage standardisé par le W3C et est largement utilisé dans la création de sites web et d'applications web.
 
@@ -61,14 +61,14 @@ wkhtmltopdf et wkhtmltoimage sont des outils open-source très utilisés pour co
 
 La méthode des binaires précompilés implique l'utilisation des versions précompilées de wkhtmltopdf et wkhtmltoimage pour différentes plates-formes, comme Windows, Linux ou macOS, sans avoir besoin de compiler le code source soi-même. Cela simplifie grandement le processus d'installation et d'utilisation de ces outils.
 
-## Back-end
+## 6. Back-end
 ### Flask<p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image7.png" /></p>
 Flask est un framework web pour Python qui permet de créer des applications web facilement. Il est léger et flexible, et fournit des fonctionnalités de base pour la création d'applications web, telles que la gestion des routes, les templates HTML, la manipulation de formulaires, la gestion des sessions et des cookies, ainsi que la connexion à une base de données.
 
 ### SQLite <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image8.png" /></p>
 SQLite est un système de gestion de bases de données relationnelles open source qui permet de stocker et d'organiser des données dans des applications logicielles. Il est portable et facile à utiliser, prend en charge le langage SQL pour la manipulation de données, ainsi que des fonctionnalités telles que la création de tables, les relations, les index, les vues, les déclencheurs et les transactions. SQLite est souvent utilisé pour stocker des données dans des applications mobiles, des navigateurs web, des systèmes embarqués, des applications de bureau et d'autres types d'applications logicielles.
 
-## Outils
+## 7. Outils
 ### VS Code<p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image9.jpeg" /></p>
 
 VS Code est un éditeur de code source gratuit et open source développée par Microsoft. Il est léger, personnalisable, offre des fonctionnalités avancées pour les développeurs et prend en charge de nombreux langages de programmation populaires. Il est souvent utilisé pour le développement web, le développement de logiciels et la science des données.
@@ -76,7 +76,7 @@ VS Code est un éditeur de code source gratuit et open source développée par M
 ### DB Browser <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image10.jpeg" /></p>
 
 DB Browser est un logiciel open source gratuit qui permet de visualiser, de modifier et de gérer des bases de données SQLite. Il offre une interface graphique conviviale pour interagir avec les bases de données SQLite, ainsi que des fonctionnalités avancées telles que la création de tables, la modification des données, l'exécution de requêtes SQL, l'importation et l'exportation de données. DB Browser est souvent utilisé pour gérer et analyser des données stockées dans des bases de données SQLite.
-## Structure du back-end
+## 8. Structure du back-end
 ### Structure de la base de données
 
 <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image11.png" /></p>
@@ -87,7 +87,7 @@ DB Browser est un logiciel open source gratuit qui permet de visualiser, de modi
 ### Structure de la table Users 
 <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image14.png" /></p>
 
-## Structure du front-end
+## 9. Structure du front-end
 la première page de notre palteforme
 <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image15.png" /></p>
 
@@ -102,7 +102,8 @@ Vous pouvez ajouter des produits par remplir cette forme :
 
 Génération d’un PDF de confirmation de commande : 
 <p align="center"><img src="https://raw.githubusercontent.com/TMouad101/Files/main/image20.png" /></p>
-## Valeur ajoutée 
+
+## 10. Valeur ajoutée 
 
 L'application web que nous développons apporte une valeur ajoutée significative à l'industrie pharmaceutique en simplifiant et en optimisant les processus d'approvisionnement, offrant ainsi une plateforme novatrice pour la communication et la gestion des stocks entre fournisseurs et pharmacies.
 <u>Optimisation des Processus</u>
@@ -127,7 +128,7 @@ Un autre avantage clé réside dans la capacité de l'application à évoluer av
 
 En somme, cette application web représente bien plus qu'une simple solution technique. Sa valeur ajoutée se manifeste à travers une efficacité accrue, une communication fluide, une gestion précise des stocks et un renforcement des relations professionnelles, contribuant ainsi à façonner un secteur pharmaceutique plus connecté, agile et performant.
 
-## Conclusion
+## 11. Conclusion
 
 En conclusion, l'élaboration de cette application web représente une étape cruciale dans la transformation de l'industrie pharmaceutique. Ce projet novateur, axé sur la simplification et l'optimisation des processus d'approvisionnement, incarne une réponse audacieuse aux défis opérationnels persistants.
 
@@ -137,11 +138,11 @@ Outre ses bénéfices opérationnels, cette application favorise un environnemen
 
 Enfin, sa capacité d'adaptation et d'évolution constante assure sa pertinence à long terme, répondant ainsi aux évolutions rapides de l'industrie pharmaceutique. Dans l'ensemble, cette application web représente bien plus qu'un simple outil technologique ; elle incarne une vision d'efficacité, d'innovation et de connectivité, contribuant à façonner un avenir prometteur pour l'industrie pharmaceutique.
 
-## Abstract 
+## 12. Abstract 
 
 Cette initiative novatrice vise à simplifier les processus d'approvisionnement en créant une plateforme favorisant la communication directe entre fournisseurs et pharmacies. L'application offre une gestion proactive des stocks, réduisant ainsi les délais de livraison et améliorant la précision des commandes. Sa valeur ajoutée réside dans sa capacité à renforcer les relations professionnelles en favorisant une collaboration étroite entre les acteurs de la chaîne d'approvisionnement. De plus, sa flexibilité et sa capacité d'évolution constante garantissent sa pertinence à long terme, s'adaptant aux évolutions rapides de l'industrie pharmaceutique. En somme, cette application incarne une réponse stratégique aux défis opérationnels de l'industrie, offrant une efficacité accrue et une connectivité renforcée pour façonner un secteur pharmaceutique plus performant et agile.
 
-## Bibliographie 
+## 13. Bibliographie 
 - [ ] https://flask.palletsprojects.com/en/2.0.x/tutorial/
 - [ ] https://www.sqlite.org/docs.html
 - [ ] https://scikit-learn.org/stable/modules/classes.html#module-sklearn.neighbors
